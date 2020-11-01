@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+        <link rel="stylesheet"  href="style.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="bg">
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="form.html">Form</a>
+                <a href="registered.html">Registered</a>
+                
+                
+            </div>
+          
+            <div class="form">
+                  <div class="formheading">
+                    <p>
+                        Registration Form
+                    </p>
+                 </div>
+                <form name="form"  id="form1"  action="http://localhost/php/connect.php" method="POST"> 
+                    NAME: <input name="name" Placeholder="Enter your name"><br><br>
+    
+                    Gender: <br>
+                        MALE<input type="radio" name="gender" value="male"><br>
+                        FEMALE<input type="radio" name="gender" value="female"><br><br>
+    
+                    EMAIL: <input name="email" Placeholder="enter your email id"><br><br>
+                    AGE: <input name="age" Placeholder="Enter your age"><br><br>
+                    MOBILE: <input name="mobile" placeholder="Enter your mobile"><br><br>
+                    <input type="submit" id="submit"><br>
+                </form>
+            </div>
+        </div>
+       
+    </body>
+</html>

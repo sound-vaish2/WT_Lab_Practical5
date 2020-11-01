@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title >
+            Registered users
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <div class="bg">
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="form.html">Form</a>
+                <a href="registered.html">Registered</a>
+                
+                
+            </div>
+            <div class="registeredheading">
+                <p>Already Registered</p>
+            </div>
+            <div class="table">
+                <table name="table" id="t1">
+                    <tr>
+                        <th>NAME</th>
+                        <th>GENDER</th>
+                        <th>EMAIL_ID</th>
+                        <th>AGE</th>
+                        <th>MOBILE NO</th>    
+                    </tr>
+                </table>
+            </div>
+    
+            <script>
+                $(document).ready(function () {
+    
+                    $.getJSON("data.json", function(data){
+                        var registered = '';
+    
+                        $.each(data, function(key, value) {
+                            registered += '<tr>';
+                                registered += '<td>' +
+                                value.name + '</td>';
+                            
+                                registered += '<td>' +
+                                value.gender + '</td>';
+    
+                                registered += '<td>' +
+                                value.email + '</td>';
+                             
+                                registered += '<td>' +
+                                value.age + '</td>';
+                                
+                                registered += '<td>' +
+                                value.mobile + '</td>';
+    
+                                registered += '</tr>';
+    
+    
+                        });
+    
+                        $('#t1').append(registered);
+                    });
+    
+                });
+            </script>
+        </div>
+        
+    </body>
+</html>
